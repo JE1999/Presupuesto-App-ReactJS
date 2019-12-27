@@ -6,10 +6,10 @@ import ShortId from 'shortid'
 //Components
 import Error from '../Reutilizable/Error'
 
-function Formulario({setGasto}){
+function Formulario({setGasto, setCrearGasto}){
 
     const [nombreGasto, setNombreGasto] = useState('')
-    const [cantidadGasto, setCantidadGasto] = useState(0)
+    const [cantidadGasto, setCantidadGasto] = useState("") //0
     const [error, setError] = useState(false)
 
     const handleSubmit = e =>{
@@ -27,6 +27,8 @@ function Formulario({setGasto}){
         }
 
         setGasto(gasto)
+        setCrearGasto(true)
+
         setError(false)
 
         setNombreGasto('')
@@ -38,7 +40,7 @@ function Formulario({setGasto}){
     return(
         <div>
 
-            <h2>Agrega tus gastos</h2>
+            <center><h2>Agrega tus gastos</h2></center>
 
             {
                 error ? 

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 //Components
 import Error from '../Reutilizable/Error'
 
-function Pregunta({setPresupuesto, setPreguntaPresupuesto}){
+function Pregunta({setPresupuesto, setPreguntaPresupuesto, setRestante}){
 
     const [cantidad, setCantidad] = useState(0)
     const [error, setError] = useState(false)
@@ -18,6 +18,7 @@ function Pregunta({setPresupuesto, setPreguntaPresupuesto}){
 
         setError(false)
         setPresupuesto(cantidad)
+        setRestante(cantidad)
         setPreguntaPresupuesto(false)
     }
 

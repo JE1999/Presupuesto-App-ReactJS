@@ -7,10 +7,10 @@ function Listado({gastos}){
 
     return(
         <div>
-            {gastos.map(gastos => (
+            {gastos.map(gasto => (
                 <Gasto
-                    key={gastos.id}
-                    gastos={gastos}
+                    key={gasto.id}
+                    gasto={gasto}
                 />
             ))}
         </div>
